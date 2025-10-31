@@ -68,7 +68,7 @@ export default function InputPanel({ value, onChange }:{ value: Inputs, onChange
           <label className="label">近月卖腿剩余天数 DTE（建议填）</label>
           <input className="input" type="number" value={value.sellDTE ?? ""} onChange={set("sellDTE")} />
         </div>
-        <div className="flex items-end gap-2">
+        <div className="flex items-end gap-2 z-10 relative">
           <button className="btn" onClick={() => onChange({
             trend: "Up", earningsDays: 10,
             nearAtmIV: 42, farAtmIV: 30,
