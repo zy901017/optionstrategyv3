@@ -10,7 +10,7 @@ export default function InputPanel({ value, onChange }:{ value: Inputs, onChange
   };
 
   return (
-    <div className="card">
+    <div className="card relative flex flex-col gap-4 h-full">
       <h2 className="text-lg font-semibold mb-3">① 输入（所见即所得）</h2>
 
       <div className="grid2">
@@ -68,7 +68,7 @@ export default function InputPanel({ value, onChange }:{ value: Inputs, onChange
           <label className="label">近月卖腿剩余天数 DTE（建议填）</label>
           <input className="input" type="number" value={value.sellDTE ?? ""} onChange={set("sellDTE")} />
         </div>
-        <div className="flex items-end gap-2 z-10 relative">
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3 z-10">
           <button className="btn" onClick={() => onChange({
             trend: "Up", earningsDays: 10,
             nearAtmIV: 42, farAtmIV: 30,
