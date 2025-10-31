@@ -36,7 +36,7 @@ export default function Page(){
 
       <p className="muted">把券商期权链里的 Δ / Θ（含正负号）与近月/远月的 <strong>ATM IV</strong> 原样填入即可。IV 结构差 = 近月 ATM IV − 远月 ATM IV。权重/阈值可在下方动态调整。</p>
 
-      <div className="grid2">
+      <div className="grid2 items-start">
         <InputPanel value={state} onChange={setState} />
         <ResultPanel result={result} />
       </div>
