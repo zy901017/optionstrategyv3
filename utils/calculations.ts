@@ -136,7 +136,7 @@ function baseScore(t: Trend, netDelta: number, netTheta: number, ivStructure: nu
   if (netTheta > 0) score += s.wTheta;
   if (ivStructure > 0) score += s.wIV;
 
-  if (earn <= 5 and nearIV > farIV and nearIV >= 60) {
+  if (earn <= 5 && nearIV > farIV && nearIV >= 60) {
     score -= s.wEarningsPenalty;
   }
   return Math.max(0, Math.min(100, score));
